@@ -1,0 +1,29 @@
+{
+  "persons": [
+    {
+      "name": "Arto Hellas",
+      "number": "123",
+      "id": "1"
+    },
+    {
+      "name": "Ada Lovelace",
+      "number": "39-44-5323523",
+      "id": "2"
+    },
+    {
+      "name": "Mary Poppendieck",
+      "number": "39-23-6423122",
+      "id": "4"
+    },
+    {
+      "id": "d4fc",
+      "name": "Salla",
+      "number": "123"
+    },
+    {
+      "id": "0086",
+      "name": "Elma",
+      "number": "12"
+    }
+  ]
+}
