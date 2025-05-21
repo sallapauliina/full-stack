@@ -80,13 +80,26 @@ const App = () => {
         number: newNumber,
       };
 
-      personService.create(person).then((response) => {
-        console.log("promise fulfilled", response);
-        setPersons(persons.concat(response.data));
-        setNewName("");
-        setNewNumber("");
-        showNotifMessage(`Added ${newName}`);
-      });
+      personService
+        .create(person)
+        .then((response) => {
+          console.log("promise fulfilled", response);
+          setPersons(persons.concat(response.data));
+          setNewName("");
+          setNewNumber("");
+          showNotifMessage(`Added ${newName}`);
+        })
+        .catch((error) => {
+          if (newName.length < 3) {
+            showErrorMessage(
+              `Person validation failed: Name '${newName}' is shorter than 3 characters`
+            );
+          }
+
+          // showErrorMessage(
+          //   `Person validation failed: Name: '${newName}' is shorter than 3 characters`
+          // );
+        });
     }
   };
 
